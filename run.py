@@ -4,7 +4,6 @@ import time
 import datetime
 import SocketServer, SimpleHTTPServer, thread, ssl
 
-# chrome://flags/#allow-insecure-localhost
 
 
 count = 0
@@ -20,6 +19,9 @@ class NextVideoHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         else:
             script = """
 <html><body><pre>
+
+// chrome://flags/#allow-insecure-localhost
+
 wasCount = 0;
 next = function(count) {
   if (count &gt; wasCount) {
